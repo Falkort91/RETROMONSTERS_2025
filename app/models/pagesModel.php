@@ -15,5 +15,5 @@ function findRandomOne(PDO $connexion){
             ORDER BY RAND()
             LIMIT 1;";
     $rs = $connexion->query($sql);                  // le "query" est utilisé quand toutes les données sont connues dés le départ et qui ne nécessite pas d'action de l'utilisateur
-    return $rs->fetchAll(PDO::FETCH_ASSOC);
+    return $rs->fetch(PDO::FETCH_ASSOC);
 }

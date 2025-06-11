@@ -9,7 +9,7 @@
               <div class="w-full md:w-1/2 relative">
                 <img
                   class="w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none"
-                  src="images/aqualizzard.png"
+                  src="../app/images/<?php echo $randommonster['name']?>.png"
                   alt="Nom du Monstre"
                 />
                 <div class="absolute top-4 right-4">
@@ -31,11 +31,10 @@
               <!-- Détails du monstre -->
               <div class="p-6 md:w-1/2">
                 <h2 class="text-3xl font-bold mb-2 creepster">
-                  Nom du Monstre
+                  <?php echo $randommonster['name'] ;?>
                 </h2>
                 <p class="text-gray-300 text-sm mb-4">
-                  Description détaillée du monstre, y compris son histoire, ses
-                  capacités, et tout ce qui le rend unique.
+                  <?php echo $randommonster ['description']?>
                 </p>
                 <div class="mb-4">
                   <strong class="text-white">Créateur:</strong>
@@ -44,19 +43,19 @@
                 <div class="mb-4">
                   <div>
                     <strong class="text-white">Type:</strong>
-                    <span class="text-gray-300">Aquatique</span>
+                    <span class="text-gray-300"><?php echo $randommonster['type']?></span>
                   </div>
                   <div>
                     <strong class="text-white">PV:</strong>
-                    <span class="text-gray-300">150</span>
+                    <span class="text-gray-300"><?php echo $randommonster['pv']?></span>
                   </div>
                   <div>
                     <strong class="text-white">Attaque:</strong>
-                    <span class="text-gray-300">120</span>
+                    <span class="text-gray-300"><?php echo $randommonster['attack']?></span>
                   </div>
                   <div>
                     <strong class="text-white">Défense:</strong>
-                    <span class="text-gray-300">100</span>
+                    <span class="text-gray-300"><?php echo $randommonster['defense']?></span>
                   </div>
                 </div>
                 <div class="mb-4">
