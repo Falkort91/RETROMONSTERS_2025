@@ -8,6 +8,7 @@ use \PDO; //Permet d'évité de DEVOIR mettre le \ devant le PDO dans l'appel de
 function homeAction(PDO $connexion): void{
     include_once '../app/models/pagesModel.php';
     $randommonster = PagesModel\findRandomOne($connexion);
+    $lastmonsters = PagesModel\findLast9($connexion);
     global $content;
     ob_start();
     include "../app/views/pages/home.php";

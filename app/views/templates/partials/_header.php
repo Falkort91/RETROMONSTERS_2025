@@ -1,22 +1,21 @@
     <header
       class="bg-gray-900 shadow-lg relative top-8"
-      x-data="{ open: false, loggedIn: true, userMenuOpen: false }"
-    >
+      x-data="{ open: false, loggedIn: true, userMenuOpen: false }">
+
       <nav
-        class="container mx-auto px-4 py-4 mb-16 flex justify-between items-center"
-      >
+        class="container mx-auto px-4 py-4 mb-16 flex justify-between items-center">
         <div class="flex items-center">
           <a href="#">
             <img
-              src="images/Logo_RetroMonsters.png"
+              src="../app/images/Logo_RetroMonsters.png"
               alt="RetroMonsters Logo"
               class="h-32 mr-3 absolute"
               style="top: -28px"
             />
           </a>
-          <a href="#" class="text-white font-bold text-xl hidden"
-            >RetroMonsters</a
-          >
+          <a href="#" class="text-white font-bold text-xl hidden">
+            RetroMonsters
+          </a>
         </div>
 
         <button @click="open = !open" class="text-white md:hidden">
@@ -26,14 +25,14 @@
         <div class="hidden md:flex items-center">
           <a
             class="text-gray-300 hover:text-white px-3 py-2 hover:bg-gray-700"
-            href="#"
-            >Monstres</a
-          >
+            href="#">
+            Monstres
+          </a>
           <a
             class="text-gray-300 hover:text-white px-3 py-2 hover:bg-gray-700 active"
-            href="#"
-            >Ajouter un monstre</a
-          >
+            href="#">
+            Ajouter un monstre
+          </a>
           <!-- <a
             class="text-gray-300 hover:text-white px-3 py-2 hover:bg-gray-700"
             href="#"
@@ -88,14 +87,14 @@
       <div x-show="open" class="md:hidden p-8">
         <a
           class="block bg-gray-900 text-white px-4 py-2 hover:bg-gray-700"
-          href="#"
-          >Monstres</a
-        >
+          href="#">
+          Monstres
+        </a>
         <a
           class="block bg-gray-900 text-white px-4 py-2 hover:bg-gray-700"
-          href="#"
-          >Ajouter un monstre</a
-        >
+          href="#">
+          Ajouter un monstre
+        </a>
         <!-- <a
           class="block bg-gray-900 text-white px-4 py-2 hover:bg-gray-700"
           href="#"

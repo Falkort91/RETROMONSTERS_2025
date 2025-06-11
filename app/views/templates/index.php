@@ -3,7 +3,7 @@
 <head>
     <?php include '../app/views/templates/partials/_head.php';?>
 </head>
-<body>
+<body class="bg-gray-800 text-white font-sans">
     <!-- HEADER -->
     <?php include '../app/views/templates/partials/_header.php';?>
 

@@ -17,3 +17,16 @@ function findRandomOne(PDO $connexion){
     $rs = $connexion->query($sql);                  // le "query" est utilisé quand toutes les données sont connues dés le départ et qui ne nécessite pas d'action de l'utilisateur
     return $rs->fetch(PDO::FETCH_ASSOC);
 }
+
+function findLast9(PDO $connexion): array{
+    $sql = "SELECT  m.*, 
+                    mt.name AS type,
+                    r.name AS rarety
+            FROM monsters m
+            JOIN monster_types mt ON m.type_id = mt.id
+            JOIN rareties r ON m.rarety_id = r.id
+            ORDER BY created_at DESC
+            LIMIT 9;";
+    $rs = $connexion->query($sql);                  // le "query" est utilisé quand toutes les données sont connues dés le départ et qui ne nécessite pas d'action de l'utilisateur
+    return $rs->fetchAll(PDO::FETCH_ASSOC);
+}
