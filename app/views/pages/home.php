@@ -2,7 +2,7 @@
         <section class="mb-20">
           <div
             class="bg-gray-700 rounded-lg shadow-lg monster-card"
-            data-monster-type="aquatique"
+            data-monster-type="<?php echo $randommonster['type']?>"
           >
             <div class="md:flex">
               <!-- Image du monstre -->
@@ -84,7 +84,7 @@
             <?php foreach ($lastmonsters as $lastmonster) :?>
             <article
               class="relative bg-gray-700 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 monster-card"
-              data-monster-type="spectral">
+              data-monster-type="<?php echo $lastmonster['type']?>">
               <img
                 class="w-full h-48 object-cover rounded-t-lg"
                 src="../app/images/<?php echo $lastmonster['name']?>.png"
@@ -132,6 +132,5 @@
               </div>
             </article>
             <?php endforeach?>
-            <!-- Répétez pour d'autres monstres -->
           </div>
         </section>
