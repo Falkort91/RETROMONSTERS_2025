@@ -57,3 +57,42 @@
             <?php endforeach?>
           </div>
         </section>
+<!-- Pagination -->
+<?php if ($TOTAL_PAGES > 1): ?>
+  <div class="flex justify-center mt-8 space-x-2">
+
+    <!-- Bouton "Précédent" -->
+    <a
+      href="?monsters=<?= $CURRENT_PAGE - 1 ?>"
+      class="px-4 py-2 rounded-full font-semibold 
+            <?= $CURRENT_PAGE <= 1 
+              ? 'bg-gray-300 text-gray-400 cursor-not-allowed opacity-50 pointer-events-none' 
+              : 'bg-gray-300 text-gray-700 hover:bg-gray-400' ?>">
+      Précédent
+    </a>
+
+    <!-- Pages numérotées -->
+    <?php for ($i = 1; $i <= $TOTAL_PAGES; $i++): ?>
+      <a
+        href="?monsters=<?= $i ?>"
+        class="px-4 py-2 rounded-full font-semibold transition duration-150
+              <?= $i === $CURRENT_PAGE 
+                ? 'bg-red-800 text-white shadow' 
+                : 'bg-gray-200 text-gray-700 hover:bg-red-900 hover:text-white' ?>">
+        <?= $i ?>
+      </a>
+    <?php endfor; ?>
+
+    <!-- Bouton "Suivant" -->
+    <a
+      href="?monsters=<?= $CURRENT_PAGE + 1 ?>"
+      class="px-4 py-2 rounded-full font-semibold 
+            <?= $CURRENT_PAGE >= $TOTAL_PAGES 
+              ? 'bg-gray-300 text-gray-400 cursor-not-allowed opacity-50 pointer-events-none' 
+              : 'bg-gray-300 text-gray-700 hover:bg-gray-400' ?>">
+      Suivant
+    </a>
+
+  </div>
+<?php endif; ?>
+
